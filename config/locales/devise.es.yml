@@ -1,0 +1,32 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+es:
+  devise:
+    passwords:
+      user:
+        updated: contraseña actualizada
+        send_instructions: Instricciones enviadas al correo
+    registrations:
+      user:
+        signed_up: usuario creado
+    sessions:
+      user:
+        signed_out: Haz cerrado sesión
+        signed_in: Haz iniciado sesión
+    failure:
+      already_authenticated: ya ha iniciado sesión
+      user:
+        unauthenticated: Debes iniciar sesión para ver este contenido
+        not_found_in_database: usuario no encontrado
+        invalid: contraseña o usuario inválidos
+    mailer:
+      confirmation_instructions:
+        subject: "Instrucciones de confirmación"
+      reset_password_instructions:
+        subject: "Instrucciones para resetear contraseña"
+      unlock_instructions:
+        subject: "Instrucciones para desbloquear cuenta"
+      email_changed:
+        subject: "Correo cambiado"
+      password_change:
+        subject: "Contraseña cambiada"
