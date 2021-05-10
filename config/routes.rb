@@ -15,5 +15,5 @@ Rails.application.routes.draw do
                registrations: 'users/registrations'
              }
 
-  resource :test_auth, only: [:index]
+  resource :example_auth, only: [:index]
 end

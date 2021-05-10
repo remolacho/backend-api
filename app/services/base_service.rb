@@ -1,4 +1,4 @@
-class ApplicationService
+class BaseService
 
   def initialize(user: nil)
     @user = user
