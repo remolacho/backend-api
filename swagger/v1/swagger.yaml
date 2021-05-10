@@ -74,6 +74,87 @@ paths:
               required:
               - email
               - password
+  "/signup":
+    post:
+      summary: Registra el nuevo usuario
+      tags:
+      - Backend Users
+      description: retorna los datos usuario y en el header el JWT response.header["Authorization"]
+      parameters:
+      - name: secret-api
+        in: header
+        required: true
+      responses:
+        '200':
+          description: success!!!
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      email:
+                        type: string
+                      firstname:
+                        type: string
+                      lastname:
+                        type: string
+        '401':
+          description: error se validan datos!!!
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    default: false
+                  message:
+                    type: string
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        nullable: true
+                      email:
+                        type: string
+                      firstname:
+                        type: string
+                      lastname:
+                        type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                    password:
+                      type: string
+                    firstname:
+                      type: string
+                    lastname:
+                      type: string
+                    password_confirmation:
+                      type: string
+              required:
+              - firstname
+              - email
+              - password
+              - password_confirmation
 servers:
 - url: https://{defaultHost}
   variables:
