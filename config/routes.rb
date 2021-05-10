@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'test_auth/index'
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
 
@@ -15,5 +14,5 @@ Rails.application.routes.draw do
                registrations: 'users/registrations'
              }
 
-  resource :example_auth, only: [:index]
+  resources :example_auth, path: 'exampleAuth', only: [:index]
 end
