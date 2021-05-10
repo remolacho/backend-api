@@ -27,5 +27,16 @@ shared_context 'user_stuff' do
 
   let(:current_user_2) { create_user_2 }
 
+  let(:params_user) {
+    {
+      user: { firstname: 'usertest2',
+              lastname: 'userTest2',
+              email: 'usertest2@email.com',
+              password: 'test123',
+              password_confirmation: 'test123'
+      }
+    }
+  }
+
   let(:'secret-api') { ENV['SECRET_API'] }
 end

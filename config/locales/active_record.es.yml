@@ -241,8 +241,13 @@ es:
           attributes:
             email:
               not_found: correo no encontrado
+              blank: el correo esta vacio
             asset:
               allowed_file_content_types: Formato de archivo no válido
+            password:
+              blank: El password esta en blanco
+            password_confirmation:
+              confirmation: El password de confirmacion no coincide
         state:
           attributes:
             asset:
